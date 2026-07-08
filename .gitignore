@@ -1,0 +1,23 @@
+# Local .terraform directories
+**/.terraform/*
+
+# State files - NEVER commit these
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Variable files with values (may contain secrets)
+*.tfvars
+*.tfvars.json
+
+# Plan output files
+*.tfplan
+*.tfplan.*
+
+# CLI config
+.terraformrc
+terraform.rc
