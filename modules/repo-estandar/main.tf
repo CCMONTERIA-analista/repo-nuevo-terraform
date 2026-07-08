@@ -11,6 +11,7 @@ resource "github_repository_ruleset" "this" {
   repository = github_repository.this.name
   target = "branch"
   enforcement = "active"
+  
 
   conditions {
     ref_name {
@@ -22,8 +23,16 @@ resource "github_repository_ruleset" "this" {
   rules {
     pull_request {
       required_approving_review_count = 1
+      
     }
   }
+
+  bypass_actors {
+   actor_id = 5
+   actor_type = "RepositoryRole" 
+   bypass_mode = "always"
+  }  
+
 }
 
 
